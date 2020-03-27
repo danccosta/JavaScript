@@ -21,6 +21,7 @@ const getTurma = letra => {
     })
 }
 
+/*
 let nomes = []
 getTurma('A').then(alunos => {
     nomes = nomes.concat(alunos.map(a => `A: ${a.nome}`))
@@ -32,6 +33,7 @@ getTurma('A').then(alunos => {
         })
     })
 })
+*/
 
 Promise.all([getTurma('A'), getTurma('B'), getTurma('C')])
     .then(turmas => [].concat(...turmas))
