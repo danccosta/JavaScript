@@ -33,3 +33,8 @@ getTurma('A').then(alunos => {
     })
 })
 
+Promise.all([getTurma('A'), getTurma('B'), getTurma('C')])
+    .then(turmas => [].concat(...turmas))
+    .then(alunos => alunos.map(aluno => aluno.nome))
+    .then(nomes => console.log(nomes))
+
