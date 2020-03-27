@@ -13,8 +13,3 @@ axios.get(url).then(response => {
     const filtro = funcionarios.filter(paisChina).filter(mulheresChinesas).reduce(menorSalario)
     console.log(filtro)
 })
-
-
-//const salario = s => 
-
-//const filtro = funcionarios.filter(mulheresChinesas)
