@@ -1,0 +1,47 @@
+<h1>Formulário</h1>
+
+<form method='POST'>
+    <input type='hidden' name='id' value='3'>
+    <input type='text' name='nome'> Nome
+    <input type='text' name='sobrenome'> Sobrenome
+    <textarea name='bio' cols='30' rows='10'></textarea> Comentários
+    <div>
+        <input type='radio' name='tipo' value='admin'> Admin
+        <input type='radio' name='tipo' value='regular'> Regular
+    </div>
+    <div>
+        <input type="checkbox" name="ativo"> Ativo
+    </div>
+    <div>
+        <select name='materia'>
+            <option>Matéria</option>
+            <option value='matematica'>Matemática</option>
+            <option value='portugues'>Português</option>
+            <option value='historia'>História</option>
+            <option value='fisica'>Física</option>
+        </select>
+        <select name='universidade' multiple size="4">
+            <option value='ufrj'>UFRJ</option>
+            <option value='uerj'>UERJ</option>
+            <option value='cefet'>CEFET</option>
+            <option value='uff'>UFF</option>
+        </select>
+    </div>
+    <button formaction="http://localhost:3003/usuarios">Incluir</button>
+    <button formaction="http://localhost:3003/usuarios/3">Alterar</button>
+    
+</form>
+
+<style>
+    input,
+    textarea,
+    select {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    input[type=radio],
+    input[type=checkbox] {
+        display: inline;
+    }
+</style>
